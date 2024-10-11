@@ -1,0 +1,121 @@
+#signup{
+    color: black;
+    font-family: Arial;
+    font-style:normal;
+    font-weight: lighter;
+    font-size: 40px;
+    position:absolute;
+    top:5px;
+    left: 60px;
+}
+
+
+
+
+#hello{
+    z-index: 2;
+    color: black;
+    font-family: Arial;
+    font-style:normal;
+    font-weight: lighter;
+    font-size: 50px;
+    position: absolute;
+    top: 195px;
+    left: 900px;
+}
+
+
+
+
+#welcome{
+    z-index: 2;
+    color: black;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 50px;
+    position: absolute;
+    top: 245px;
+    left: 900px;
+}
+
+
+
+
+#logo{
+    height: 80px;
+    width: 80px;
+    left: 90%;
+    position: absolute;
+}
+
+
+
+
+#doc2{
+    z-index: 1;
+    height: 500px;
+    position: absolute;
+    width: 400px;
+    top: 228px;
+    left: 1060px;
+}
+
+
+
+
+
+
+
+
+
+#box{
+    position: absolute;
+    height: 580px;
+    width: 700px;
+    top: 60px;
+    left: 50px;
+    border-radius: 10%;
+    background-color:#0cc0df ;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+form{
+    top: 100px;
+    left: 45px;
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 560px;
+    margin: 10px;
+    height: 40px;:
+    border: 2px solid black;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+}
+
+input[type="submit"] {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 22px;
+    cursor: pointer;
+    position: absolute;
+    top: 380px;
+    left: 220px;
+    height: 40px;
+    width: 150px;
+    font-size: 18px;
+    font-weight: bold;
+    align-items: center;
+}
+
+input[type="submit"]:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+}
