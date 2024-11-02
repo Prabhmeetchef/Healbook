@@ -17,7 +17,7 @@ export default function Home() {
       <a href="homepage">
         <img src="logomain.png" id="logo" alt="logo.png" />
       </a>
-      <a href="login.html">
+      <a href="login">
         <button id="login">Log In</button>
       </a>
     </div>
