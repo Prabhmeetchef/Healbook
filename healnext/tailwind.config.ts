@@ -12,8 +12,19 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      spacing: {
+        '42': '10.5rem', // Custom spacing for top-42, left-42, etc.
+        '94': '23.5rem',
+        '100': '26rem' // Custom spacing for top-94, left-94, etc.
+      },
+      top: {
+        '42': '10.5rem', // Custom value specifically for `top-42`
+        '94': '23.5rem',
+        '100': '26rem', // Custom value specifically for `top-94`
+      },
     },
   },
   plugins: [],
 };
+
 export default config;

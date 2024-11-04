@@ -17,6 +17,6 @@ model session {
   id         Int      @id @default(autoincrement())
   doctorname String   @db.VarChar(20)
   diagnosis  String   @db.VarChar(20)
+  date       DateTime
   note       String   @db.Text
-  date       DateTime @default(now())
 }
