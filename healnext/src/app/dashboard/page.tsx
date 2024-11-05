@@ -4,6 +4,7 @@ import Link from 'next/link';
 import '../dashboard/dashboard.css';
 import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 import { useRouter } from 'next/navigation';
+import LoadingSpinner from '../../components/loading';
 
 // Define the type for a session
 interface Session {
@@ -41,7 +42,7 @@ export default function Dashboard() {
 
     // Show a loading indicator while checking authentication
     if (isLoading) {
-        return <div>Loading...</div>;
+        return <LoadingSpinner />;
     }
 
     return (
