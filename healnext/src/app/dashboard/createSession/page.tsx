@@ -3,16 +3,17 @@ import '../createSession/sessioncss.css'
 import {useForm} from 'react-hook-form';
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 
 
 interface SessionForm{
-    doctorname: String;
-    diagnosis: String;
+    doctorname: string;
+    diagnosis: string;
     date: Date;
-    note: String;
+    note: string;
 }
-export default function createSession(){
+export default function CreateSession(){
     const {register, handleSubmit} = useForm<SessionForm>();
     const router = useRouter();
     return(
@@ -28,9 +29,9 @@ export default function createSession(){
     </div>
     <div>
     <div id="header" className="w-full bg-white min-h-[6rem] shadow flex justify-between items-center px-4">
-        <a href="/" className="w-1/6 ml-2 sm:ml-4">
+        <Link href="/" className="w-1/6 ml-2 sm:ml-4">
         <img src="/logomainwhite.png" id="logo" alt="logo"/>
-        </a>
+        </Link>
         <a href="profile" className="inline-flex mr-2 sm:mr-4"><img src="/10061438.png" id="pfp" alt="profile" className="w-10"/></a>
     </div>
     <div className='min-h-100 w-1/2 bg-white absolute top-48 left-1/4 justify-center'>

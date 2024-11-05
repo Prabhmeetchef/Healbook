@@ -8,7 +8,6 @@ export default function Signup() {
       <Head>
         <meta name="viewport" content="device-width, initial-scale=1.0" />
         <title>Sign up for your personal Healbook</title>
-        <link rel="stylesheet" href="/stylesheet2signup.css" />
       </Head>
 
       <div id="container"> {/* Add a container for styling */}

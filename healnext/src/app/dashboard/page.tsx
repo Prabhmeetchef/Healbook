@@ -54,9 +54,9 @@ export default function Dashboard() {
             </div>
             <div>
                 <div id="header" className="w-full bg-white min-h-[4rem] shadow flex justify-between items-center px-4 border-b-2">
-                    <a href="/" className="w-1/12 ml-2 sm:ml-4">
+                    <Link href="/" className="w-1/12 ml-2 sm:ml-4">
                         <img src="logomainwhite.png" id="logo" alt="logo" />
-                    </a>
+                    </Link>
                     <a href="profile" className="inline-flex mr-2 sm:mr-4">
                         <img src="10061438.png" id="pfp" alt="profile" className="w-8 hover:w-8" />
                     </a>
@@ -91,7 +91,7 @@ export default function Dashboard() {
                                 ))
                             ) : (
                                 <tr>
-                                    <td colSpan="5" className='border  px-4 py-2 text-center'>No sessions found</td>
+                                    <td colSpan={5} className='border  px-4 py-2 text-center'>No sessions found</td>
                                 </tr>
                             )}
                         </tbody>

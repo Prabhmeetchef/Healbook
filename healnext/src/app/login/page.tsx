@@ -1,5 +1,4 @@
 import '../login/login.css'
-import Head from 'next/head'; // Import Head from Next.js
 import Image from 'next/image'; // Use Next.js Image for better performance
 
 export default function login(){
