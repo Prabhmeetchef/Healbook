@@ -2,6 +2,8 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import '../dashboard/dashboard.css';
+import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
+import { useRouter } from 'next/navigation';
 
 // Define the type for a session
 interface Session {
@@ -14,6 +16,8 @@ interface Session {
 
 export default function Dashboard() {
     const [sessions, setSessions] = useState<Session[]>([]); // Specify the state type as an array of Session
+    const { isAuthenticated, isLoading } = useKindeBrowserClient(); // Add isLoading to check loading state
+    const router = useRouter();
 
     // Fetch sessions data when the component mounts
     useEffect(() => {
@@ -28,13 +32,22 @@ export default function Dashboard() {
             .catch(error => console.error('Error fetching sessions:', error));
     }, []);
 
+    // Redirect if not authenticated and loading is complete
+    useEffect(() => {
+        if (!isLoading && !isAuthenticated) {
+            router.push('/'); // Use router.push instead of redirect
+        }
+    }, [isLoading, isAuthenticated, router]);
+
+    // Show a loading indicator while checking authentication
+    if (isLoading) {
+        return <div>Loading...</div>;
+    }
+
     return (
         <div className='bg-white w-full min-h-screen h-full'>
             <div id='head'>
-                <meta
-                    name="viewport"
-                    content="device-width, initial-scale=1.0"
-                />
+                <meta name="viewport" content="device-width, initial-scale=1.0" />
                 <link rel="shortcut icon" href="mainlogo.png" type="image/x-icon" />
                 <title>Healbook: Your Health Data Vault</title>
             </div>
@@ -56,35 +69,34 @@ export default function Dashboard() {
                     <Link href='/dashboard/createSession'> + New Session</Link>
                 </button>
                 <div className='min-h-96 bg-white relative top-52' style={{ width: '96vw', left: '2vw' }}>
-    <table className='min-w-full'>
-        <thead>
-            <tr>
-                <th className=' border border-black px-4 py-2 text-center'>Doctor Name</th>
-                <th className=' border border-black px-4 py-2 text-center'>Diagnosis</th>
-                <th className=' border border-black px-4 py-2 text-center'>Date</th>
-                <th className=' border border-black px-4 py-2 text-center'>Note</th>
-            </tr>
-        </thead>
-        <tbody>
-            {sessions.length > 0 ? (
-                sessions.map((session) => (
-                    <tr key={session.id}>
-                        <td className=' border-b px-4 py-2 text-center'>{session.doctorname}</td>
-                        <td className=' border-b px-4 py-2 text-center'>{session.diagnosis}</td>
-                        <td className=' border-b px-4 py-2 text-center'>{session.date}</td>
-                        <td className=' border-b px-4 py-2 text-center max-w-48'>{session.note || 'N/A'}</td>
-                    </tr>
-                ))
-            ) : (
-                <tr>
-                    <td colSpan="5" className='border  px-4 py-2 text-center'>No sessions found</td>
-                </tr>
-            )}
-        </tbody>
-    </table>
-    <div className='relative top-8 left-1/2 w-40 p-2'>Take Care!</div>
-</div>
-
+                    <table className='min-w-full'>
+                        <thead>
+                            <tr>
+                                <th className=' border border-black px-4 py-2 text-center'>Doctor Name</th>
+                                <th className=' border border-black px-4 py-2 text-center'>Diagnosis</th>
+                                <th className=' border border-black px-4 py-2 text-center'>Date</th>
+                                <th className=' border border-black px-4 py-2 text-center'>Note</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {sessions.length > 0 ? (
+                                sessions.map((session) => (
+                                    <tr key={session.id}>
+                                        <td className=' border-b px-4 py-2 text-center'>{session.doctorname}</td>
+                                        <td className=' border-b px-4 py-2 text-center'>{session.diagnosis}</td>
+                                        <td className=' border-b px-4 py-2 text-center'>{session.date}</td>
+                                        <td className=' border-b px-4 py-2 text-center max-w-48'>{session.note || 'N/A'}</td>
+                                    </tr>
+                                ))
+                            ) : (
+                                <tr>
+                                    <td colSpan="5" className='border  px-4 py-2 text-center'>No sessions found</td>
+                                </tr>
+                            )}
+                        </tbody>
+                    </table>
+                    <div className='relative top-8 left-1/2 w-40 p-2'>Take Care!</div>
+                </div>
             </div>
         </div>
     );
