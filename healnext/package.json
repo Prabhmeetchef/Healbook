@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@kinde-oss/kinde-auth-nextjs": "github:kinde-oss/kinde-auth-nextjs",
     "@prisma/client": "^5.21.1",
     "axios": "^1.7.7",
     "formidable": "^3.5.2",

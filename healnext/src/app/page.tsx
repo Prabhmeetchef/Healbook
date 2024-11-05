@@ -1,4 +1,5 @@
 import '../app/styles.css'
+import {RegisterLink, LoginLink} from "@kinde-oss/kinde-auth-nextjs/components";
 export default function Home() {
   return (
     <>
@@ -17,9 +18,9 @@ export default function Home() {
       <a href="homepage">
         <img src="logomain.png" id="logo" alt="logo.png" />
       </a>
-      <a href="login">
+      <LoginLink>
         <button id="login">Log In</button>
-      </a>
+      </LoginLink>
     </div>
     <div id="page">
       <div id="box1">
@@ -27,9 +28,9 @@ export default function Home() {
           The best place for all your Healthcare data.<br />
           &nbsp;It is not only convenient but also secure!
         </h1>
-        <a href="signup">
+        <RegisterLink>
           <button id="signup">Sign up</button>
-        </a>
+        </RegisterLink>
       </div>
       <img id="doc" src="Doc.jpg" />
       <div id="box2">
