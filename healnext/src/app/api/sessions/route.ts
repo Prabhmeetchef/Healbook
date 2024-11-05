@@ -16,6 +16,33 @@ function convertDDMMYYYYToISO(dateString: string) {
     return new Date(`${year}-${month}-${day}T00:00:00Z`);
 }
 
+// Function to format Date object to dd-mm-yyyy
+function formatDateToDDMMYYYY(date: Date) {
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const year = date.getFullYear();
+    return `${day}-${month}-${year}`;
+}
+
+// Handle GET and POST requests
+export async function GET() {
+    try {
+        // Fetch all sessions from the database
+        const sessions = await prisma.session.findMany();
+
+        // Format the date field to dd-mm-yyyy
+        const formattedSessions = sessions.map((session) => ({
+            ...session,
+            date: formatDateToDDMMYYYY(session.date)
+        }));
+
+        return NextResponse.json(formattedSessions, { status: 200 });
+    } catch (error) {
+        console.error('Error fetching sessions:', error);
+        return NextResponse.json({ error: 'Unable to fetch sessions data' }, { status: 500 });
+    }
+}
+
 export async function POST(request: NextRequest) {
     const body = await request.json();
     console.log("Received body", body);
