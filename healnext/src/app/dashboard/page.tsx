@@ -96,9 +96,9 @@ export default function Dashboard() {
                             )}
                         </tbody>
                     </table>
-                    <div className='relative top-8 left-1/2 w-40 p-2'>Take Care!</div>
                 </div>
             </div>
+            <div className='relative top-2 left-1/2 w-40 p-2 font-serif font-medium'>Take Care :)</div>
         </div>
     );
 }

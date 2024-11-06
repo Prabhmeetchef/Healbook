@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import '../app/styles.css'
 import {RegisterLink, LoginLink} from "@kinde-oss/kinde-auth-nextjs/components";
 export default function Home() {
@@ -15,9 +16,9 @@ export default function Home() {
 
   <body>
     <div id="header">
-      <a href="homepage">
+      <Link href="/">
         <img src="logomain.png" id="logo" alt="logo.png" />
-      </a>
+      </Link>
       <LoginLink>
         <button id="login">Log In</button>
       </LoginLink>
@@ -34,22 +35,22 @@ export default function Home() {
       </div>
       <img id="doc" src="Doc.jpg" />
       <div id="box2">
-        <img src="medicinescough.webp" />
+        <img src="medicinescough.webp" id='meds'/>
         <h1 id="box2text">
           Securely store medical records-<br />
           Set personalized medication reminders-<br />
           Connect with healthcare providers-<br />
           Access health data anytime, anywhere-<br />
           Improve medication adherence-<br />
-          Enhance health outcomes-
+          Enhance personal health outcomes-
         </h1>
       </div>
     </div>
     <div id="footer">
-      <a href="instagram"><img src="instagram.png" id="gram" /></a>
-      <a href="twitter" id="twitter"><img src="twirra.png" id="twitter" /></a>
-      <a href="aboutus"><h2 id="ab">About us</h2></a>
-      <a href="contactus"><h2 id="contact">Contact us</h2></a>
+      <a href='https://github.com/Prabhmeetchef/Healbook' target='_blank'><img id='github' src='github.png'/></a>
+      <a href='mailto:prabhmeetsinghns1000@gmail.com' target='_blank'><img id='mail' src='mail.jpg'/></a>
+      <a href="https://www.linkedin.com/in/harshavardhan-p-787a11202/" target='_blank'><h2 id="ab2">Harshavardhan Srinivas</h2></a>
+      <a href="https://www.linkedin.com/in/prabhmeet-singh-11446699w/" target='_blank'><h2 id="ab">Prabhmeet Singh</h2></a>
     </div>
   </body>
   </>

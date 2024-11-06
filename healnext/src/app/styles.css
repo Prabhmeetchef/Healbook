@@ -19,44 +19,48 @@ h1,h2{
     margin:0%;
     padding: 0%;
     border: none;
-    height:15%;
+    height:10%;
     width: 100%;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.177);
     z-index: 100;
 }
 
 #logo {
-    width: 200px;
-    height: 50px;
+    width: auto;
+    height: 7vh;
     border: 0cap solid black;
-    margin: 2%;
+    margin: 1%;
     border-radius: 10px;
-    margin: 2%;
+    margin: 1%;
 }
 
 #login{
     background-color: black;
-    font-size: large;
+    font-size: medium;
     font-weight:600;
     color: white;
     cursor: pointer;
     border-radius: 25px;
+    padding: 12px;
     width: 120px;
-    height: 50px;
     position: absolute;
-    top: 28px;
-    right: 8%;
+    top: 1.82vh;
+    right: 6.2%;
     border: none;
 }
 #login:hover{
     color: black;
     background-color: white;
+    transition: 0.25s all ease;
 }
 button{
     box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
 }  
-button:hover {
-    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.4);
+#signup:hover {
+    color: black;
+    border: solid 2px black;
+    background-color: white;
+    transition: 0.25s all ease;
 }
 body{
     margin: 0px;
@@ -67,14 +71,16 @@ body{
 #box1{
     position: absolute;
     z-index: 1;
-    top: 280px;
-    left: 75px;
+    top: 40vh;
+    left: 5.2vw;
     width: 100%;
 }
+
 #doc{
     position: absolute;
-    left: 800px;
-    top: 170px;
+    left: 56.2vw;
+    top: 15vh;
+    width: 42vw;
 }
 
 #signup{
@@ -87,17 +93,23 @@ body{
     width: 125px;
     height: 52px;
     position: absolute;
-    left: 225px;
+    left: 18vw;
     scale: 0.9;
+}
+
+#meds{
+    position: relative;
+    left: 10vw;height: 32vh; top: 19vh;
 }
 
 #box2{
     position: absolute;
     z-index: 2;
-    top: 1000px;
-    left: 75px;
+    top: 132vh;
+    left: 2vw;
     height: 25%;
     width: 100%;
+    text-align: right;
 }
 
 #box2text{
@@ -105,22 +117,22 @@ body{
     z-index: 2;
     top: 100px;
     left: 600px;
-    width: 800px;
+    width: 52vw;
 }
 
-#gram{
-    height: 55px;
-    width: 75px;
-    top: 12px;
-    left: 100px;
+#mail{
+    height: 6vh;
+    top: 2vw;
+    left: 38vh;
     position: absolute;
+    border: solid white 2px;
+    border-radius: 10px;
 }
 
-#twitter{
-    height: 40px;
-    width: 40px;
-    top: 10px;
-    left: 125px;
+#github{
+    height: 6vh;
+    top: 2vw;
+    left: 22vh;
     position: absolute;
 }
 
@@ -136,15 +148,17 @@ body{
     border-top: solid black 2px;
 }
 
-
-
 #ab{
     position: absolute;
-    left: 1300px;
+    font-size: large;
+    left: 80vw;
+    top: 4.10vh;
 }
-#contact{
+#ab2{
     position: absolute;
-    left: 1100px;
+    font-size: large;
+    left: 64vw;
+    top: 4.10vh;
 }
 
 h2{
