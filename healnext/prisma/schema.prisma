@@ -13,10 +13,17 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model session {
-  id         Int      @id @default(autoincrement())
-  doctorname String   @db.VarChar(20)
-  diagnosis  String   @db.VarChar(20)
-  date       DateTime
-  note       String   @db.Text
+model User {
+  email     String   @id @unique // Use email as the unique identifier
+  sessions  Session[] // Relation to sessions
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  doctorname String
+  diagnosis String
+  date      DateTime
+  note      String
+  userEmail String // Foreign key for user (email)
+  user      User    @relation(fields: [userEmail], references: [email]) // references the unique email
 }
