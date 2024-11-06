@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from 'zod';
 import prisma from "@/prisma/client";
+import {getKindeServerSession} from "@kinde-oss/kinde-auth-nextjs/server";
 
 // Define the schema with date as a string
 const createSessionSchema = z.object({
@@ -25,10 +26,23 @@ function formatDateToDDMMYYYY(date: Date) {
 }
 
 // Handle GET and POST requests
-export async function GET() {
+export async function GET(request: NextRequest) {
     try {
-        // Fetch all sessions from the database
-        const sessions = await prisma.session.findMany();
+        // Get the user from Kinde authentication
+        const {getUser} = getKindeServerSession();
+        const user = await getUser(); // Kinde provides the user object
+        
+        // Extract the user email from Kinde user object
+        const userEmail = user?.email;
+        
+        if (!userEmail) {
+            return NextResponse.json({ error: 'Unauthorized: No user email found' }, { status: 401 });
+        }
+
+        // Fetch sessions by userEmail
+        const sessions = await prisma.session.findMany({
+            where: { userEmail }
+        });
 
         // Format the date field to dd-mm-yyyy
         const formattedSessions = sessions.map((session) => ({
@@ -55,8 +69,34 @@ export async function POST(request: NextRequest) {
 
     const { doctorname, diagnosis, note, date } = body;
 
+    // Get the authenticated user's data from Kinde
+    const { getUser } = getKindeServerSession();
+    const user = await getUser(); // Assuming Kinde provides user info
+    const userEmail = user?.email;
+
+    if (!userEmail) {
+        return NextResponse.json({ error: 'Unauthorized: No user email found' }, { status: 401 });
+    }
+
     // Convert date to ISO before saving
     const isoDate = convertDDMMYYYYToISO(date);
+
+    // Check if the user exists using the email
+    const userExists = await prisma.user.findUnique({
+        where: { email: userEmail },
+    });
+
+    // If the user doesn't exist, create a new user or return an error
+    if (!userExists) {
+        // Optionally create the user here
+        await prisma.user.create({
+            data: {
+                email: userEmail,
+                // Add other necessary fields to create the user (e.g., name, etc.)
+            }
+        });
+        console.log('User created with email:', userEmail);
+    }
 
     // Create a new session in the database
     const newSession = await prisma.session.create({
@@ -64,8 +104,9 @@ export async function POST(request: NextRequest) {
             doctorname,
             diagnosis,
             date: isoDate,
-            note
-        }
+            note,
+            userEmail // Attach the userEmail to the session
+        },
     });
 
     console.log('New Session:', newSession);
