@@ -26,7 +26,7 @@ function formatDateToDDMMYYYY(date: Date) {
 }
 
 // Handle GET and POST requests
-export async function GET(request: NextRequest) {
+export async function GET() {
     try {
         // Get the user from Kinde authentication
         const {getUser} = getKindeServerSession();
