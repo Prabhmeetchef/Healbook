@@ -12,6 +12,7 @@
     "@kinde-oss/kinde-auth-nextjs": "github:kinde-oss/kinde-auth-nextjs",
     "@prisma/client": "^5.21.1",
     "axios": "^1.7.7",
+    "cloudinary": "^2.5.1",
     "formidable": "^3.5.2",
     "next": "15.0.2",
     "prisma": "^5.21.1",
