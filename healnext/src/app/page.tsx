@@ -54,7 +54,7 @@ export default function Home() {
     </div>
     <div id='healchat'>
       <h1 id='knowbetter'>Want to know us better?</h1>
-      <button id='healchatvisit'>Visit our chatbot: <a href='http://167.179.72.153/' target='_blank'><b>Healchat</b></a></button>
+      <a href='https://healchat.healbook.in' target='_blank'><button id='healchatvisit'><b>Healchat👋</b></button></a>
     </div>
   </body>
   </>
