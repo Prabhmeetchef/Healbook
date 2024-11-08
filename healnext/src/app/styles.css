@@ -161,6 +161,7 @@ body{
     left: 80vw;
     top: 4.10vh;
 }
+
 #ab2{
     position: absolute;
     font-size: 1.18vw;
@@ -170,4 +171,37 @@ body{
 
 h2{
     font-size: 18px;
+}
+
+#healchat{
+    position: fixed;
+    background-color: #0cc0df;
+    bottom: 2vh;
+    right: 2vw;
+    border-radius: 20px;
+    border: solid black 2px;
+    z-index: 10000000;
+    text-align: center;
+    color: white;
+    height: 19vh;
+    width: 25.2vw;
+}
+
+#knowbetter{
+    font-size: 1.8rem;
+    padding-right: 15px;
+}
+
+#healchatvisit{
+    font-size: 1.2rem;
+    padding: 12px;
+    background-color: black;
+    border-radius: 15px;
+    align-items: center;
+    transition: all 0.52s ease;
+    color: white;
+}
+
+#healchatvisit:hover{
+    scale: 1.08;
 }

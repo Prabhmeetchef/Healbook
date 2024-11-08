@@ -52,6 +52,10 @@ export default function Home() {
       <a href="https://www.linkedin.com/in/harshavardhan-p-787a11202/" target='_blank'><h2 id="ab2">Harshavardhan Srinivas</h2></a>
       <a href="https://www.linkedin.com/in/prabhmeet-singh-11446699w/" target='_blank'><h2 id="ab">Prabhmeet Singh</h2></a>
     </div>
+    <div id='healchat'>
+      <h1 id='knowbetter'>Want to know us better?</h1>
+      <button id='healchatvisit'>Visit our chatbot: <a href='http://167.179.72.153/' target='_blank'><b>Healchat</b></a></button>
+    </div>
   </body>
   </>
   );
