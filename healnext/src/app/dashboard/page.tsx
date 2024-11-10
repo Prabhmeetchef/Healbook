@@ -54,18 +54,18 @@ export default function Dashboard() {
             </div>
             <div>
                 <div id="header" className="w-full bg-white min-h-[4rem] shadow flex justify-between items-center px-4 border-b-2">
-                    <Link href="/" className="w-1/12 ml-2 sm:ml-4">
+                    <Link href="/" className="w-1/12 ml-2 sm:ml-4 min-w-32">
                         <img src="logomainwhite.png" id="logo" alt="logo" />
                     </Link>
                     <a href="profile" className="inline-flex mr-2 sm:mr-4">
                         <img src="10061438.png" id="pfp" alt="profile" className="w-8 hover:w-8" />
                     </a>
                 </div>
-                <form className='space-x-2 absolute top-52 left-8'>
+                <form className='space-x-2 absolute top-52 left-8 hidden md:block'>
                     <input id='searchdocordiag' placeholder='Enter Doctor name or Diagnosis' className='border-2 text-base w-72 h-10 shadow p-2'></input>
                     <button type="submit" className='border-2 font-medium text-black bg-white w-20 h-10 shadow rounded-lg hover:border-2 hover:border-black transition-colors'>submit</button>
                 </form>
-                <button id='Sort' className='border-2 font-medium text-black bg-white w-20 h-10 shadow rounded-lg hover:text-black hover:border-2 hover:border-black transition-colors absolute top-52 right-8'>Sort</button>
+                <button id='Sort' className='border-2 font-medium text-black bg-white w-20 h-10 shadow rounded-lg hover:text-black hover:border-2 hover:border-black transition-colors absolute top-52 right-8 hidden md:block'>Sort</button>
                 <button id='createSession' className=' font-bold text-lg w-48 h-12 rounded-full bg-[#0cc0df] text-white hover:bg-white hover:border-[#0cc0df] border-2 hover:text-[#0cc0df] transition-all absolute top-32 right-6'>
                     <Link href='/dashboard/createSession'> + New Session</Link>
                 </button>

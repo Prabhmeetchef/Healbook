@@ -19,19 +19,19 @@ h1,h2{
     margin:0%;
     padding: 0%;
     border: none;
-    height:10%;
+    height:10%; min-height: 52px;
     width: 100%;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.177);
     z-index: 100;
 }
 
 #logo {
-    width: auto;
-    height: 7vh;
+    width: 12vw;
+    height: auto;
     border: 0cap solid black;
     margin: 1%;
     border-radius: 10px;
-    margin: 1%;
+    margin: 1%; min-width: 125px;
 }
 
 #login{
@@ -128,7 +128,7 @@ body{
 #mail{
     height: 6vh;
     top: 2vw;
-    left: 38vh;
+    left: 20vw;
     position: absolute;
     border: solid white 2px;
     border-radius: 10px;
@@ -137,7 +137,7 @@ body{
 #github{
     height: 6vh;
     top: 2vw;
-    left: 22vh;
+    left: 12vw;
     position: absolute;
 }
 
@@ -149,22 +149,22 @@ body{
 #footer{
     position: absolute;
     width: 98.2vw;
-    top: 1600px;
-    height: 110px;
+    top: 210vh;
+    height: 15vh;
     border-top: solid black 2px;
     left: 0.4vw;
 }
 
 #ab{
     position: absolute;
-    font-size: 1.18vw;
+    font-size: 2vh;
     left: 80vw;
     top: 4.10vh;
 }
 
 #ab2{
     position: absolute;
-    font-size: 1.18vw;
+    font-size: 2vh;
     left: 64vw;
     top: 4.10vh;
 }
@@ -183,28 +183,27 @@ h2{
     z-index: 10000000;
     text-align: center;
     color: white;
-    height: 19vh;
+    height: 19vh; min-height: 120px;
     width: 20.2vw;
     box-shadow: 0px 1px 8px 2px rgba(0, 0, 0, 0.2);
 }
 
 #knowbetter{
     position: relative;
-    font-size: 1.32rem;
+    font-size: 1.15rem;
     top:1.2vh;
 }
 
 #healchatvisit{
     position: relative;
     top: 2vh;
-    font-size: 1.0rem;
+    font-size: 1rem;
     background-color: rgb(70, 212, 255);
     border-radius: 15px;
     align-items: center;
     transition: all 0.52s ease;
     color: white;
     padding: 12px;
-    max-width: 12vw;
     transition: background-color 0.32s ease;
 }
 
@@ -212,3 +211,215 @@ h2{
     background-color: #0066FF;
 }
 
+@media (max-width:600px){
+    #logo{
+    padding-top: 2.82vh;
+    width: 12vw;
+    height: auto;
+    border: 0cap solid black;
+    margin: 1%;
+    border-radius: 10px;
+    margin: 1%; min-width: 125px;
+    }
+    #healchat{
+        position: fixed;
+        background-color: white;
+        bottom: 10vh;
+        right: 2vw;
+        border-radius: 20px;
+        border: solid black 1.5px;
+        z-index: 10000000;
+        text-align: center;
+        color: white;
+        height: 19vh;
+        width: 48vw;
+        box-shadow: 0px 1px 8px 2px rgba(0, 0, 0, 0.2);
+    }
+    #box2{
+        position: absolute;
+        z-index: 2;
+        top: 52vh;
+        left: 2vw;
+        height: 25%;
+        width: 100%;
+        text-align: right;
+    }
+    #doc{
+        position: absolute;
+        left: 56.2vw;
+        top: 15vh;
+        width: 42vw;
+    }
+
+    h1.alig{
+        color: black;
+        text-align: end;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    h1,h2{
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    #box1text{
+        font-size: 1rem;
+    }
+    
+    #header{
+        background-color: #0cc0df;
+        position: fixed;
+        margin:0%;
+        padding: 0%;
+        border: none;
+        height:10%; min-height: 52px;
+        width: 100%;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.177);
+        z-index: 100;
+    }
+    
+    #login{
+        background-color: black;
+        font-size: medium;
+        font-weight:600;
+        color: white;
+        cursor: pointer;
+        border-radius: 25px;
+        padding: 12px;
+        width: 120px;
+        position: absolute;
+        top: 1.82vh;
+        right: 6.2%;
+        border: none;
+    }
+    
+    #login:hover{
+        color: black;
+        background-color: white;
+        transition: 0.25s all ease;
+    }
+    
+    button{
+        box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
+    }  
+    
+    #signup:hover {
+        color: black;
+        border: solid 2px black;
+        background-color: white;
+        transition: 0.25s all ease;
+    }
+    
+    
+    body{
+        margin: 0px;
+        position: absolute;
+    }
+    
+    #box1{
+        position: absolute;
+        z-index: 1;
+        top: 20vh;
+        left: 5.2vw;
+        width: 100%;
+    }
+    
+    #signup{
+        background-color: black;
+        font-size: 20px;
+        font-weight:600;
+        color: white;
+        cursor: pointer;
+        border-radius: 25px;
+        width: 125px;
+        height: 52px;
+        position: absolute;
+        left: 12vw;
+        scale: 0.9;
+    }
+    
+    #meds{
+        position: relative;
+        left: 6.2vw;width: 28vw; top: 18vh;
+    }
+    
+    #box2text{
+        position: absolute;
+        z-index: 2;
+        top: 100px;
+        left: 32vw;
+        width: 60vw;
+        font-size: 0.76rem;
+    }
+    
+    #mail{
+        height: 6vh;
+        top: 8.2vw;
+        left: 28vw;
+        position: absolute;
+        border: solid white 2px;
+        border-radius: 10px;
+    }
+    
+    #github{
+        height: 6vh;
+        top: 8.2vw;
+        left: 12vw;
+        position: absolute;
+    }
+    
+    #box1text{
+        width: 60vw;
+        font-size: 0.72rem;
+    }
+    
+    #footer{
+        position: absolute;
+        width: 98.2vw;
+        top: 100vh;
+        height: 15vh;
+        border-top: solid black 2px;
+        left: 0.4vw;
+    }
+    
+    #ab{
+        position: absolute;
+        font-size: 2vh;
+        left: 52vw;
+        top: 7.2vh;
+    }
+    
+    #ab2{
+        position: absolute;
+        font-size: 2vh;
+        left: 52vw;
+        top: 4.10vh;
+    }
+    
+    h2{
+        font-size: 18px;
+    }
+    
+    #knowbetter{
+        position: relative;
+        font-size: 1.15rem;
+        top:1.2vh;
+    }
+    
+    #healchatvisit{
+        position: relative;
+        top: 2vh;
+        font-size: 1rem;
+        background-color: rgb(70, 212, 255);
+        border-radius: 15px;
+        align-items: center;
+        transition: all 0.52s ease;
+        color: white;
+        padding: 12px;
+        transition: background-color 0.32s ease;
+    }
+    
+    #healchatvisit:hover{
+        background-color: #0066FF;
+    }
+}
