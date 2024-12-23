@@ -73,10 +73,10 @@ export default function Dashboard() {
                     <table className='min-w-full'>
                         <thead>
                             <tr>
-                                <th className=' border border-black px-4 py-2 text-center'>Doctor Name</th>
-                                <th className=' border border-black px-4 py-2 text-center'>Diagnosis</th>
-                                <th className=' border border-black px-4 py-2 text-center'>Date</th>
-                                <th className=' border border-black px-4 py-2 text-center'>Note</th>
+                                <th className=' border border-black border-opacity-40 px-4 py-2 text-center'>Doctor Name</th>
+                                <th className=' border border-black border-opacity-40 px-4 py-2 text-center'>Diagnosis</th>
+                                <th className=' border border-black border-opacity-40 px-4 py-2 text-center'>Date</th>
+                                <th className=' border border-black border-opacity-40 px-4 py-2 text-center'>Note</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -98,7 +98,6 @@ export default function Dashboard() {
                     </table>
                 </div>
             </div>
-            <div className='relative top-2 left-1/2 w-40 p-2 font-serif font-medium'>Take Care :)</div>
         </div>
     );
 }

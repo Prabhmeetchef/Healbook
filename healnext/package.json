@@ -11,14 +11,20 @@
   "dependencies": {
     "@kinde-oss/kinde-auth-nextjs": "github:kinde-oss/kinde-auth-nextjs",
     "@prisma/client": "^5.21.1",
+    "@radix-ui/react-slot": "^1.1.1",
     "axios": "^1.7.7",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "formidable": "^3.5.2",
+    "lucide-react": "^0.469.0",
     "next": "15.0.2",
     "prisma": "^5.21.1",
     "react": "19.0.0-rc-02c0e824-20241028",
     "react-dom": "19.0.0-rc-02c0e824-20241028",
     "react-hook-form": "^7.53.1",
     "sharp": "^0.33.5",
+    "tailwind-merge": "^2.5.5",
+    "tailwindcss-animate": "^1.0.7",
     "zod": "^3.23.8"
   },
   "devDependencies": {
