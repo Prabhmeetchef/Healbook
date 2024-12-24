@@ -1,5 +1,5 @@
 "use client"
-
+import Head from "next/head";
 import { useState, useEffect } from "react"
 import {RegisterLink, LoginLink} from "@kinde-oss/kinde-auth-nextjs/components";
 import '../app/styles.css'
@@ -22,7 +22,7 @@ export default function Home() {
   }, [])
   return (
     <>
-    <head>
+    <Head>
     <title>Healbook: Your Health Data Vault</title>
     <meta
       name="viewport"
@@ -30,12 +30,12 @@ export default function Home() {
     initial-scale=1.0"
     />
     <link rel="shortcut icon" href="mainlogowhite.png" type="image/x-icon" />
-  </head>
+  </Head>
   <body className="min-w-screen">
     <div className="min-h-screen">
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white shadow-md" : "bg-transparent"}`}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <a href="/">
+        <Link href="/">
           <img
             src="logomain.png"
             id="logo"
@@ -50,9 +50,9 @@ export default function Home() {
               isScrolled ? 'opacity-100' : 'opacity-0'
             }`}
           />
-          </a>
+          </Link>
           <div className="flex items-center justify-between h-20">
-          <a href="/">
+          <Link href="/">
           <img
             src="logomain.png"
             id="logo"
@@ -60,11 +60,11 @@ export default function Home() {
               isScrolled ? 'opacity-0' : 'opacity-0'
             }`}
           />
-          </a>
+          </Link>
             <nav className={`hidden md:flex space-x-8 ${isScrolled ? "text-gray-800" : "text-white"}`}>
-              <a href="/" className="text-sm font-medium hover:text-[#0CC0DF] transition-colors">Features</a>
-              <a href="/" className="text-sm font-medium hover:text-[#0CC0DF] transition-colors">About</a>
-              <a href="/" className="text-sm font-medium hover:text-[#0CC0DF] transition-colors">Contact</a>
+              <Link href="/" className="text-sm font-medium hover:text-[#0CC0DF] transition-colors">Features</Link>
+              <Link href="/" className="text-sm font-medium hover:text-[#0CC0DF] transition-colors">About</Link>
+              <Link href="/" className="text-sm font-medium hover:text-[#0CC0DF] transition-colors">Contact</Link>
             </nav>
             <div className="hidden md:flex items-center space-x-4">
               <LoginLink>
@@ -92,9 +92,9 @@ export default function Home() {
         {isMenuOpen && (
           <div className="md:hidden bg-white">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <a href="#features" className="block px-3 py-2 text-base font-medium text-gray-800 hover:text-[#0CC0DF]">Features</a>
-              <a href="#about" className="block px-3 py-2 text-base font-medium text-gray-800 hover:text-[#0CC0DF]">About</a>
-              <a href="#contact" className="block px-3 py-2 text-base font-medium text-gray-800 hover:text-[#0CC0DF]">Contact</a>
+              <Link href="#features" className="block px-3 py-2 text-base font-medium text-gray-800 hover:text-[#0CC0DF]">Features</Link>
+              <Link href="#about" className="block px-3 py-2 text-base font-medium text-gray-800 hover:text-[#0CC0DF]">About</Link>
+              <Link href="#contact" className="block px-3 py-2 text-base font-medium text-gray-800 hover:text-[#0CC0DF]">Contact</Link>
               <Button variant="ghost" className="w-full text-left px-3 py-2 text-base font-medium text-gray-800 hover:text-[#0CC0DF]">Log In</Button>
               <Button className="w-full text-left px-3 py-2 text-base font-medium bg-[#0CC0DF] text-white hover:bg-[#0CC0DF]">Sign Up</Button>
             </div>
@@ -204,9 +204,9 @@ export default function Home() {
         <div className="container px-4 sm:px-6 lg:px-24">
           <div className="grid justify-center grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-24">
             <div className="px-00">
-              <a href="/" className="flex items-center space-x-2 mb-4">
+              <Link href="/" className="flex items-center space-x-2 mb-4">
               <img src="logomainwhite.png" id="logo" alt="logo.png" />
-              </a>
+              </Link>
               <p className="text-gray-600 mb-4">Secure healthcare data management platform for everyone</p>
             </div>
             <div className="px-2">
@@ -226,7 +226,7 @@ export default function Home() {
             <div className="px-8">
               <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
               <div className="space-y-2">
-                <a href="/" className="block text-gray-600 hover:text-[#0CC0DF]">About</a>
+                <Link href="/" className="block text-gray-600 hover:text-[#0CC0DF]">About</Link>
                 <a href="https://healchat.healbook.in" className="block text-gray-600 hover:text-[#0CC0DF]">Healchat</a>
               </div>
             </div>
