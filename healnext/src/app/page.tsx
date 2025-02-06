@@ -187,7 +187,7 @@ export default function Home() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-6">Ready to take control of your healthcare data?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Join thousands of users who trust Healbook with their healthcare information management
+              Join Healbook for end to end healthcare information management
             </p>
             <div className="flex justify-center">
               <RegisterLink>
