@@ -33,8 +33,8 @@ export default function Home() {
   </Head>
   <body className="min-w-screen">
     <div className="min-h-screen">
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white shadow-md" : "bg-transparent"}`}>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white shadow-md" : "bg-transparent"} w-[100vw]`}>
+        <div className="container mx-auto">
         <Link href="/">
           <img
             src="logomain.png"
@@ -66,7 +66,7 @@ export default function Home() {
               <Link href="/" className="text-sm font-medium hover:text-[#0CC0DF] transition-colors">About</Link>
               <Link href="/" className="text-sm font-medium hover:text-[#0CC0DF] transition-colors">Contact</Link>
             </nav>
-            <div className="hidden md:flex items-center space-x-4">
+            <div className="hidden md:flex items-center px-8 space-x-6">
               <LoginLink>
               <Button variant="ghost" className={`text-sm font-medium ${isScrolled ? "text-gray-800 hover:text-[#0CC0DF]" : "text-white hover:text-cyan-100"}`}>
                 Log In
@@ -102,8 +102,8 @@ export default function Home() {
         )}
       </header>
 
-      <main>
-        <section className="relative pt-20 pb-32 bg-gradient-to-r from-[#0CC0DF] to-[#00d9ff]">
+      <main className="w-[100vw]">
+        <section className="relative pt-20 pb-32 bg-gradient-to-r from-[#0CC0DF] to-[#00d9ff] w-full">
           <div className="container mx-auto px-4 sm:px-6 lg:px-16">
             <div className="flex flex-col lg:flex-row items-center space-x-60">
               <div className="w-full lg:w-1/2 text-center lg:text-left mb-12 lg:mb-0">
@@ -145,8 +145,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="features" className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="features" className="py-20 w-[100vw] bg-gray-50">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <h2 className="text-3xl font-bold text-center mb-12">Why Choose Healbook?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <FeatureCard
@@ -183,7 +183,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-20 bg-[#0CC0DF] text-white">
+        <section className="py-20 bg-[#0CC0DF] text-white w-[100vw]">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-6">Ready to take control of your healthcare data?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
@@ -200,10 +200,11 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="bg-gray-50 pt-24">
-        <div className="container px-4 sm:px-6 lg:px-24">
-          <div className="grid justify-center grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-24">
-            <div className="px-00">
+      <footer className="bg-gray-50 w-[100vw] pt-24 text-center items-center justify-center
+      ">
+        <div className="container w-[100vw]">
+          <div className="w-[100vw] grid justify-center grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4 sm:px-6 lg:px-8 py-12">
+            <div className="flex flex-col justify-center items-center text-center">
               <Link href="/" className="flex items-center space-x-2 mb-4">
               <img src="logomainwhite.png" id="logo" alt="logo.png" />
               </Link>
@@ -211,28 +212,25 @@ export default function Home() {
             </div>
             <div className="px-2">
               <h4 className="text-lg font-semibold mb-4">Founders</h4>
-              <div className="space-y-2">
+              <div className="flex flex-col space-y-2 items-center">
                 <FounderLink name="Harshavardhan Srinivas" url="https://www.linkedin.com/in/harshavardhan-p-787a11202/" />
                 <FounderLink name="Prabhmeet Singh" url="https://www.linkedin.com/in/prabhmeet-singh-11446699w/" />
               </div>
             </div>
             <div className="px-7">
               <h4 className="text-lg font-semibold mb-4">Connect With Us</h4>
-              <div className="space-y-2">
+              <div className="flex flex-col space-y-2 items-center">
                 <SocialLink icon={<Github className="h-5 w-5" />} name="GitHub Repository" url="https://github.com/Prabhmeetchef/Healbook" />
                 <SocialLink icon={<Mail className="h-5 w-5" />} name="Email Us" url="mailto:prabhmeetsinghns1000@gmail.com" />
               </div>
             </div>
-            <div className="px-8">
-              <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <div className="">
+              <h4 className="text-lg mb-4 font-semibold">Quick Links</h4>
               <div className="space-y-2">
                 <Link href="/" className="block text-gray-600 hover:text-[#0CC0DF]">About</Link>
                 <a href="https://healchat.healbook.in" className="block text-gray-600 hover:text-[#0CC0DF]">Healchat</a>
               </div>
             </div>
-          </div>
-          <div className="m-8 pt-8 border-t border-gray-200 text-center">
-            <p className="text-gray-600">&copy; {new Date().getFullYear()} Healbook. All rights reserved.</p>
           </div>
         </div>
       </footer>
