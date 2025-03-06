@@ -137,7 +137,7 @@ export async function POST(request: NextRequest) {
       const folderPath = `prescriptions/${safeUserDir}`;
       
       // Upload to Cloudinary with HIPAA-compliant settings
-      const uploadResult = await new Promise<any>((resolve, reject) => {
+      const uploadResult = await new Promise((resolve, reject) => {
         const stream = cloudinary.uploader.upload_stream(
           {
             folder: folderPath, // Optional: Organize files into folders
@@ -163,12 +163,11 @@ export async function POST(request: NextRequest) {
       });
       
       // Store the public URL in the database
-      fileUrl = uploadResult.secure_url;
+      fileUrl = (uploadResult as { secure_url: string }).secure_url;
       
       // For added security, just store the Cloudinary asset ID and generate URLs as needed
       // fileUrl = `cloudinary://${uploadResult.public_id}`;
-      
-      console.log('File uploaded to Cloudinary:', uploadResult.public_id);
+
     }
 
     // Create a new session in the database with the prescription image URL

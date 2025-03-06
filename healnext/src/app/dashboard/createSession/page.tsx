@@ -99,8 +99,12 @@ export default function CreateSession() {
               try {
                 const response = JSON.parse(xhr.responseText);
                 resolve(response);
-              } catch (e) {
-                reject(new Error('Invalid response format'));
+              } catch (e: Error | unknown) {
+                if (e instanceof Error) {
+                  reject(new Error('Invalid response format: ' + e.message));
+                } else {
+                  reject(new Error('Invalid response format'));
+                }
               }
             } else {
               reject(new Error(`Upload failed with status ${xhr.status}`));
