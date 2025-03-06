@@ -24,6 +24,7 @@ model Session {
   diagnosis String
   date      DateTime
   note      String
+  fileUrl     String?  // Add this field for Cloudinary URL
   userEmail String // Foreign key for user (email)
   user      User    @relation(fields: [userEmail], references: [email]) // references the unique email
 }

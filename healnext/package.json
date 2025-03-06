@@ -9,11 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@google-cloud/storage": "^7.15.2",
     "@kinde-oss/kinde-auth-nextjs": "github:kinde-oss/kinde-auth-nextjs",
     "@prisma/client": "^5.21.1",
     "@radix-ui/react-slot": "^1.1.1",
     "axios": "^1.7.7",
     "class-variance-authority": "^0.7.1",
+    "cloudinary": "^2.5.1",
     "clsx": "^2.1.1",
     "formidable": "^3.5.2",
     "lucide-react": "^0.469.0",
@@ -25,6 +27,7 @@
     "sharp": "^0.33.5",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
+    "uuid": "^11.1.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
