@@ -214,10 +214,10 @@ export default function Home() {
               <div className="absolute -inset-4 bg-white/20 backdrop-blur-sm rounded-3xl -rotate-2"></div>
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/30">
                 <Image
-                  src="/Doc.jpg?height=600&width=600"
+                  src="/Doc.jpg"
                   alt="Healthcare Professional"
-                  width={200}
-                  height={200}
+                  width={600}
+                  height={600}
                   className="w-full h-auto"
                   priority
                 />
