@@ -5,7 +5,6 @@ import '../app/styles.css'
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent} from "@/components/ui/card"
 import { Shield, Lock, Clock, FileText, Share2, Bell, Users, Calendar, Menu, X, Github, Mail, ExternalLink, ChevronRight } from 'lucide-react'
 
 export default function Home() {
@@ -291,7 +290,6 @@ export default function Home() {
                 ))}
               </div>
             </div>
-
             <div className="order-1 lg:order-2 relative">
               <div className="absolute -inset-4 bg-cyan-50 rounded-3xl rotate-3"></div>
               <div className="relative bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
@@ -312,65 +310,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Testimonials */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-block px-4 py-1 bg-cyan-100 text-[#0CC0DF] rounded-full text-sm font-medium mb-4">
-              Testimonials
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">What Our Users Say</h2>
-            <p className="text-gray-600 text-lg">Healbook is trusted by patients and healthcare providers alike.</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                quote:
-                  "Healbook has transformed how I manage my family's health records. Everything is now in one place and easily accessible.",
-                name: "Sarah Johnson",
-                role: "Parent of Three",
-              },
-              {
-                quote:
-                  "As a healthcare provider, Healbook makes it easy to access patient information securely and efficiently.",
-                name: "Dr. Michael Chen",
-                role: "Family Physician",
-              },
-              {
-                quote:
-                  "The appointment reminders and medication tracking features have been game-changers for managing my chronic condition.",
-                name: "Robert Williams",
-                role: "Patient",
-              },
-            ].map((testimonial, i) => (
-              <Card key={i} className="border-none shadow-lg">
-                <CardContent className="p-8">
-                  <div className="mb-6 text-[#0CC0DF]">
-                    {Array(5)
-                      .fill(0)
-                      .map((_, i) => (
-                        <span key={i} className="text-2xl">
-                          ★
-                        </span>
-                      ))}
-                  </div>
-                  <p className="text-gray-700 mb-6 italic">"{testimonial.quote}"</p>
-                  <div>
-                    <p className="font-semibold text-gray-900">{testimonial.name}</p>
-                    <p className="text-gray-500 text-sm">{testimonial.role}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[#0CC0DF] skew-y-3 transform origin-bottom-right"></div>
+        <div className="absolute inset-0 bg-[#0CC0DF] skew-y-2 transform origin-bottom-right"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center text-white">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Ready to take control of your healthcare data?</h2>
@@ -379,7 +321,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <RegisterLink>
-                <Button size="lg" className="bg-white text-[#0CC0DF] hover:bg-cyan-50 rounded-full px-8 text-lg">
+                <Button size="lg" className="bg-white text-[#0CC0DF] hover:bg-cyan-50 rounded-full px-8 py-2 text-lg">
                   Sign Up Now
                 </Button>
               </RegisterLink>
@@ -409,7 +351,6 @@ export default function Home() {
               <div className="flex space-x-4">
               </div>
             </div>
-
             <div>
               <h4 className="text-lg font-semibold mb-6">Founders</h4>
               <ul className="space-y-4">
