@@ -66,9 +66,9 @@ export default function Dashboard() {
                     <button type="submit" className='border-2 font-medium text-black bg-white w-20 h-10 shadow rounded-lg hover:border-2 hover:border-black transition-colors'>submit</button>
                 </form>
                 <button id='Sort' className='border-2 font-medium text-black bg-white w-20 h-10 shadow rounded-lg hover:text-black hover:border-2 hover:border-black transition-colors absolute top-52 right-8 hidden md:block'>Sort</button>
-                <button id='createSession' className=' font-bold text-lg w-48 h-12 rounded-full bg-[#0cc0df] text-white hover:bg-white hover:border-[#0cc0df] border-2 hover:text-[#0cc0df] transition-all absolute top-32 right-6'>
-                    <Link href='/dashboard/createSession'> + New Session</Link>
-                </button>
+                <Link href='/dashboard/createSession'><button id='createSession' className=' font-bold text-lg w-48 h-12 rounded-full bg-[#0cc0df] text-white hover:bg-white hover:border-[#0cc0df] border-2 hover:text-[#0cc0df] transition-all absolute top-32 right-6'>
+                     + New Session
+                </button></Link>
                 <div className='min-h-96 bg-white relative top-52' style={{ width: '96vw', left: '2vw' }}>
                     <table className='min-w-full'>
                         <thead>
