@@ -158,7 +158,7 @@ export default function CreateSession() {
       <div>
         <div id="header" className="fixed w-full bg-white min-h-[4rem] shadow flex justify-between items-center px-4 border-b-2">
           <Link href="/dashboard" className="w-1/12 ml-2 sm:ml-4 min-w-32"><img src="/logomainwhite.png" id="logo" alt="logo" /></Link>
-          <a href="profile" className="inline-flex mr-2 sm:mr-4"><img src="/10061438.png" id="pfp" alt="profile" className="w-8 hover:w-8" /></a>
+          <a href="/profile" className="inline-flex mx-2 sm:mx-4"><img src="/10061438.png" id="pfp" alt="profile" className="w-8 hover:w-8" /></a>
         </div>
       </div>
       <div className="pt-24 flex flex-col items-center justify-center flex-1 px-4 py-8">
@@ -213,7 +213,7 @@ export default function CreateSession() {
                 className="border-2 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500"
                 {...register('date', { required: "Date is required" })}
               />
-              {errors.date && <p className="text-red-500 text-sm mt-1">{errors.date.message}</p>}
+              {errors.date && <p className="text-red-500 text-sm my-1">{errors.date.message}</p>}
             </div>
             
             <div className="flex flex-col">
