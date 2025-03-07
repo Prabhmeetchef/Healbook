@@ -325,13 +325,6 @@ export default function Home() {
                   Sign Up Now
                 </Button>
               </RegisterLink>
-              <Button
-                size="lg"
-                variant="outline"
-                className="text-white border-white hover:bg-white/10 rounded-full px-8 text-lg"
-              >
-                Schedule a Demo
-              </Button>
             </div>
           </div>
         </div>
